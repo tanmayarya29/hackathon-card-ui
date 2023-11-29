@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./CreditCardForm.css"; // Import your CSS file
+import "./CreditCardForm.css";
 
 const CreditCardForm = () => {
   const [logo, setLogo] = useState(""); // State for the card logo
@@ -10,6 +10,10 @@ const CreditCardForm = () => {
 
   const handleButtonClick = () => {
     setisCardExited(true);
+    // after 3 sec navigate to http://localhost:5173/
+    setTimeout(() => {
+      window.open("http://localhost:5173/notification");
+    }, "1000");
   };
   useEffect(() => {
     // Your existing JavaScript logic from script.js can go here
